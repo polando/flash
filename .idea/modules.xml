@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/DistLibrary/DistLibrary.iml" filepath="$PROJECT_DIR$/DistLibrary/DistLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FirstProj.iml" filepath="$PROJECT_DIR$/FirstProj.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FlashLight/FlashLight.iml" filepath="$PROJECT_DIR$/FlashLight/FlashLight.iml" />
+    </modules>
+  </component>
+</project>
+

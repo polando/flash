@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+		
+	<parent>
+	    <groupId>FirstProj</groupId>
+        <artifactId>FirstProj</artifactId>
+        <version>1.0</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+	
+	<artifactId>DistLibrary</artifactId>
+    <name>DistLibrary</name>
+    <packaging>apklib</packaging>
+
+	
+	<dependencies>
+		<dependency>
+			<groupId>com.google.android</groupId>
+			<artifactId>android</artifactId>
+			<version>${android.Version}</version>
+			<scope>provided</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.google.android</groupId>
+			<artifactId>support-v4</artifactId>
+			<version>r6</version>
+		</dependency>
+		
+<!--			
+		<dependency>
+			<groupId>com.madgag</groupId>
+			<artifactId>scprov-jdk15</artifactId>
+			<version>${spongy.Version}</version>
+		</dependency>
+-->	
+
+	</dependencies>
+	
+	<build>
+        <!--<finalName>${customers.resource}-v${project.version}</finalName>-->
+		<sourceDirectory>src</sourceDirectory>
+		
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>com.jayway.maven.plugins.android.generation2</groupId>
+					<artifactId>android-maven-plugin</artifactId>
+					<version>3.6.1</version>
+					<extensions>true</extensions>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		
+		<plugins>
+			<plugin>
+				<groupId>com.jayway.maven.plugins.android.generation2</groupId>
+				<artifactId>android-maven-plugin</artifactId>
+				<configuration>
+					<run>
+						<debug>${debug.skip}</debug>
+					</run>
+					<sdk>
+						<platform>${android.sdkVer}</platform>
+					</sdk>
+					<emulator>
+						<avd>16</avd>
+					</emulator>
+					<undeployBeforeDeploy>true</undeployBeforeDeploy>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
